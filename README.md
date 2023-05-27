@@ -1,5 +1,5 @@
 # Descrição
-O projeto Comunicação Universal tem como objetivo principal tornar a comunicação mais inclusiva e eficiente entre pessoas surdas e pessoas com acuidade auditiva. Para isso, desenvolvemos um sistema inovador que traduz a Língua Brasileira de Sinais (Libras) para o idioma português através do reconhecimento da língua de sinais em tempo real por uma Inteligência Artificial.
+O projeto Comunicação Global tem como objetivo principal tornar a comunicação mais inclusiva e eficiente entre pessoas surdas e pessoas com acuidade auditiva. Para isso, desenvolvemos um sistema inovador que traduz a Língua Brasileira de Sinais (Libras) para o idioma português através do reconhecimento da língua de sinais em tempo real por uma Inteligência Artificial.
 A linguagem de sinais é uma forma fundamental de comunicação para a comunidade surda, e nosso projeto visa quebrar as barreiras linguísticas ao permitir que pessoas com acuidade auditiva possam compreender os sinais e se comunicar de forma mais efetiva.
 
 
