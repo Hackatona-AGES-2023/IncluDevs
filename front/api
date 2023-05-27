@@ -1,0 +1,9 @@
+<script>
+        // Requisição ao backend
+        fetch('/api/dados')
+            .then(response => response.json())
+            .then(data => {
+                // Manipule os dados recebidos do backend
+                document.getElementById('dados').innerText = JSON.stringify(data);
+            });
+    </script>

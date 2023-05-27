@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <!-- <title>Non-Inputable Box with Text "Frase:"</title>
+  <style>
+    .non-inputable-box {
+      border: 1px solid #808080;
+      border-radius: 10px;
+      padding: 0px 11px 4px 8px;
+      font-size: 20px;
+      background-color: #d9d9d9;
+      color: #808080;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 40px;
+      height: 25px;
+      text-align: center;
+      position: absolute;
+        top: 83.5%;;
+        left: 72%;
+        z-index: 1;
+    }
+  </style>
+  <div class="non-inputable-box">
+    frase:
+  </div> -->
+  <style>
+    .string-box {
+      border: 1px solid #808080;
+      border-radius: 11px;
+      padding: 5px;
+      font-size: 16px;
+      height: 100px;
+      width: 500px;
+      background-color: #d9d9d9;
+      color: #000;
+      position: absolute;
+      top: 95%;
+      left: 90%;
+      transform: translate(-50%, -50%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    }
+  </style>
+  <div class="string-box" id="outputBox"></div>
+
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      background-color: #808080;
+      color: #fff;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      margin-right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: #fff; /* Replace with your logo image or background color */
+    }
+
+  
+  </style>
+  <div class="top-bar">
+  </div>
+
+  <script>
+    // Example string to display in the box
+    var textString = "This is the string to display";
+
+    // Set the string as the content of the box
+    document.getElementById("outputBox").textContent = textString;
+  </script>
+  <head>
+    <title>Text Input Box with Image Conversion</title>
+    <style>
+      .rounded-input {
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        padding: 8px 12px;
+        width: 700px;
+        height: 12px;
+        font-size: 16px;
+        color: #808080;
+        outline: none;
+        position: absolute;
+        top: 92%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+  
+      .image-output {
+        margin-top: 20px;
+      }
+  
+      .image-output img {
+        width: 50px;
+        height: auto;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" class="rounded-input" placeholder="Enter text" oninput="convertTextToImages(this.value)" />
+    <div id="imageOutput" class="image-output"></div>
+  
+    <!-- <script>
+      function convertTextToImages(text) {
+        var imageOutput = document.getElementById('imageOutput');
+        imageOutput.innerHTML = ''; // Clear previous output
+  
+        for (var i = 0; i < text.length; i++) {
+          var char = text.charAt(i).toLowerCase();
+          var imageUrl = getCharImageUrl(char);
+  
+          if (imageUrl) {
+            var img = document.createElement('img');
+            img.src = imageUrl;
+            imageOutput.appendChild(img);
+          }
+        }
+      }
+  
+      function getCharImageUrl(char) {
+        var charMap = {
+        'a': 'path/to/a.png',
+        'b': 'path/to/b.png',
+        'c': 'path/to/c.png',
+        'd': 'path/to/d.png',
+        'e': 'path/to/e.png',
+        'f': 'path/to/f.png',
+        'g': 'path/to/g.png',
+        'h': 'path/to/h.png',
+        'i': 'path/to/i.png',
+        'j': 'path/to/j.png',
+        'k': 'path/to/k.png',
+        'l': 'path/to/l.png',
+        'm': 'path/to/m.png',
+        'n': 'path/to/n.png',
+        'o': 'path/to/o.png',
+        'p': 'path/to/p.png',
+        'q': 'path/to/q.png',
+        'r': 'path/to/r.png',
+        's': 'path/to/s.png',
+        't': 'path/to/t.png',
+        'u': 'path/to/u.png',
+        'v': 'path/to/v.png',
+        'w': 'path/to/w.png',
+        'x': 'path/to/x.png',
+        'y': 'path/to/y.png',
+        'z': 'path/to/z.png'
+      };
+  
+        return charMap[char] || null;
+      }
+    </script> -->
+  </body>
+  </html>
+
+  <head>
+    <title>Webcam Frames to Base64</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+    
+        #video {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+
+        #captureBtn {
+      display: block;
+      margin-top: 10px;
+      
+    }
+
+    #partialImage {
+      width: 64px;
+      height: 64px;
+    }
+
+    #highlightRect {
+      position: absolute;
+      border: 2px solid #808080;
+      pointer-events: none;
+    }
+      </style>
+  </head>
+  <body>
+    <video id="video" autoplay></video>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <div id="highlightRect"></div>
+    <button id="captureBtn">Capture Frame</button>
+
+
+    <script>
+      var video = document.getElementById('video');
+      var captureBtn = document.getElementById('captureBtn'); 
+    //   console.log(video);
+  
+      // Request access to the webcam
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          video.srcObject = stream;
+        //   console.log(video.srcObject);
+        // setInterval(captureFrame, 1000); // Capture a frame every 1 second (adjust as needed)
+        })
+        .catch(function(error) {
+          console.error('Error accessing the webcam:', error);
+        });
+  
+        captureBtn.addEventListener('click', function() {
+        var canvas = document.createElement('canvas');
+        // console.log(canvas);
+        var context = canvas.getContext('2d');
+        //   console.log(context);
+        // Set the canvas dimensions to match the video frame
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        var videoHeight = video.videoHeight;
+        var videoWidth = video.videoWidth;
+  
+        
+      // Calculate the coordinates for the desired portion
+        var startX = (videoWidth - 256) / 2; // Adjust the starting X position as needed
+        var startY = (videoHeight - 256) / 2; // Adjust the starting Y position as needed
+
+        // Draw the current video frame onto the canvas
+        context.drawImage(video, startX, startY, 64, 64, 0, 0, canvas.width, canvas.height);
+  
+        // Export the canvas content as base64
+        var base64Data = canvas.toDataURL('image/png');
+        console.log(base64Data);
+        // Set the base64 image as the background
+         // Calculate the position and size of the highlight rectangle
+      var rectLeft = (startX / videoWidth) * 100;
+      var rectTop = (startY / videoHeight) * 100;
+      var rectWidth = (64 / videoWidth) * 100;
+      var rectHeight = (64 / videoHeight) * 100;
+
+      // Set the position and size of the highlight rectangle
+      highlightRect.style.left = rectLeft + '%';
+      highlightRect.style.top = rectTop + '%';
+      highlightRect.style.width = rectWidth + '%';
+      highlightRect.style.height = rectHeight + '%';
+       
+      });
+    </script>
+  </body>
+  </html>
+  
